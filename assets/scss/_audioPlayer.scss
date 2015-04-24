@@ -1,0 +1,82 @@
+@import "settings";
+@import "foundation";
+
+#playerController {
+  @media #{$small-only} {
+    right: 0;
+    width: 50%;
+  }
+  position: fixed;
+  top: 0;
+  height: em-calc(50);
+  @media #{$medium-up} {
+    left: 33%;
+    width: 33%;
+  }
+  background-color: lighten(#dedede, 20%);
+}
+
+#song-duration {
+  position: absolute;
+  right: em-calc(3);
+  bottom: em-calc(5);
+  font-size: em-calc(12);
+}
+
+#song-cur-time {
+  position: absolute;
+  left: em-calc(3);
+  bottom: em-calc(5);
+  font-size: em-calc(12);
+}
+
+#playerTimeLine {
+  position: absolute;
+  height: em-calc(5);
+  width: 100%;
+  bottom: 0;
+  background-color: $gainsboro;
+}
+#playerTimeLineCursor {
+  height: 100%;
+  width: 0;
+  background-color: $aluminum;
+}
+
+#song-name {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: em-calc(13);
+  color: $charcoal;
+}
+
+#song-album-artist {
+  color: $charcoal;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  top: em-calc(20);
+  font-size: em-calc(11);
+}
+
+#div-player-art {
+  height: em-calc(50);
+  position: fixed;
+  right: 67%;
+  top: 0;
+  width: em-calc(50);
+
+  @media #{$small-only} {
+    right: 50%;
+  }
+  img {
+    height: 100%;
+  }
+}
+
+#nextSong-container {
+  display: none;
+}

@@ -1,0 +1,8 @@
+@import "settings";
+@import "foundation";
+
+.upload-progress-bar {
+  display: inline-block;
+  height: em-calc(20);
+  background-color: blue;
+}

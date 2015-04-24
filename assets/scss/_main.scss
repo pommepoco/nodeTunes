@@ -1,0 +1,50 @@
+@import "settings";
+@import "foundation";
+
+#alertContainer {
+  position: fixed;
+  z-index: 150;
+  top: em-calc(10);
+  right: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+#view {
+  padding-top: em-calc(50);
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#ng-view-container {
+  height: 90vh;
+  overflow: scroll;
+}
+
+
+.selected {
+  background-color: $monsoon !important;
+}
+
+.focus {
+  background-color: lighten($primary-color, 10) !important;
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}

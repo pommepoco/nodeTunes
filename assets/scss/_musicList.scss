@@ -1,0 +1,18 @@
+@import "settings";
+@import "foundation";
+
+#playListTemplate {
+  position: absolute;
+  right: em-calc(5);
+  top: 0;
+  div {
+    position: fixed;
+    top: em-calc(40);
+    background-color: white;
+    width: em-calc(300);
+  }
+}
+
+.musicListTable {
+  width: 100%;
+}

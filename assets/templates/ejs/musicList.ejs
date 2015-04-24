@@ -1,0 +1,56 @@
+<div>
+  <table class="musicListTable unselectable large-collapse">
+    <tr>
+      <th>
+        Title
+        <% if (orderList === 'title') { %>
+        <i
+          class="fa">
+        </i>
+        <% } %>
+      </th>
+      <th>
+        Artist
+        <% if (orderList === 'artist') { %>
+        <i
+          class="fa">
+        </i>
+        <% } %>
+      </th>
+      <th>
+        Album
+        <% if (orderList === 'album') { %>
+        <i
+          class="fa">
+        </i>
+        <% } %>
+      </th>
+      <th>
+        Genre
+        <% if (orderList === 'genre') { %>
+        <i
+          class="fa">
+        </i>
+        <% } %>
+      </th>
+      <th>
+        Year
+        <% if (orderList === 'year') { %>
+        <i
+          ng-if="orderList === 'year'"
+          class="fa">
+        </i>
+        <% } %>
+      </th>
+    </tr>
+    <% for (var i in musicLib) { var song = musicLib[i] %>
+    <tr data-index="<%= i %>">
+      <td><%= song.title %></td>
+      <td><%= song.artist %></td>
+      <td><%= song.album %></td>
+      <td><%= song.genre %></td>
+      <td><%= song.year %></td>
+    </tr>
+  <% } %>
+  </table>
+</div>

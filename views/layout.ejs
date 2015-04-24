@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="nodeTunesApp">
+  <head>
+    <title>NodeTunes</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="/styles/font-awesome.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+    <script>window.FileAPI = { staticPath: '/js/bower_components/FileAPI/dist/' };</script>
+  </head>
+
+  <body>
+
+
+    <%- body %>
+
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
+    <!--TEMPLATES END-->
+
+    <script type="text/template" src="/templates/ejs/alert.ejs"     id="alertTemplate"></script>
+    <script type="text/template" src="/templates/ejs/login.ejs"     id="loginTemplate"></script>
+    <script type="text/template" src="/templates/ejs/musicList.ejs" id="musicListTemplate"></script>
+    <script type="text/template" src="/templates/ejs/upload.ejs"    id="uploadTemplate"></script>
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src="/bower_components/fileapi/dist/FileAPI.min.js"></script>
+    <script src="/js/foundation/modernizr.js"></script>
+    <script src="/js/foundation/fastclick.js"></script>
+    <script src="/js/foundation/foundation.min.js"></script>
+    <script src="/js/lib/alert.js"></script>
+    <script src="/js/lib/audioPlayer.js"></script>
+    <script src="/js/lib/requestFilter.js"></script>
+    <script src="/js/lib/routes.js"></script>
+    <script src="/js/lib/tools.js"></script>
+    <script src="/js/controllers/homepage.js"></script>
+    <script src="/js/controllers/music.js"></script>
+    <script src="/js/controllers/session.js"></script>
+    <script src="/js/controllers/upload.js"></script>
+    <script src="/js/app/appLauncher.js"></script>
+    <script src="/js/app/config.js"></script>
+    <script src="/js/foundation/app.js"></script>
+    <script src="/js/foundation/placeholder.js"></script>
+    <script src="/js/global/ErrorParser.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
