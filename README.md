@@ -25,3 +25,7 @@ sails lift
 #Configuration
 
 you can setup your own configuration in config/local.js.
+
+#Commun issues
+
+you can have some problemes if you want compile scss.
