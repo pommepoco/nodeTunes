@@ -1,0 +1,10 @@
+{
+  "name": "nodeTunes",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "",
+    "foundation": "",
+    "underscore": "",
+    "fileapi": ""
+  }
+}
