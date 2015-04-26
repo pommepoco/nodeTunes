@@ -12,19 +12,19 @@ You need to install:
 
 [Sails](http://sailsjs.org): npm install -g sails
 
-then you type follow commmands in your terminal at the project root:
+Then you can type the following commmands in your terminal at the project root:
 
 npm install
 
 compass watch
 
-cd assets; bower install; cd ..
+bower install
 
 sails lift
 
 #Configuration
 
-you can setup your own configuration in config/local.js.
+You can setup your own configuration in config/local.js.
 
 #Commun issues
 
