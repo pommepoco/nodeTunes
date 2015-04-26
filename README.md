@@ -18,6 +18,8 @@ then you type follow commmands in your terminal at the project root:
 
 npm install
 
+compass watch
+
 sails lift
 
 #Configuration
