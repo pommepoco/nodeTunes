@@ -1,8 +1,3 @@
 {
-  "directory": "assets/bower_components",
-  "dependencies": {
-    "underscore": "",
-    "foundation": "",
-    "fileapi": ""
-  }
+  "directory": "assets/bower_components"
 }
