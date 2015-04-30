@@ -18,7 +18,7 @@ npm install
 
 compass watch
 
-cd assets; bower install; cd ..
+bower install
 
 sails lift
 

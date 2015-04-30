@@ -16,8 +16,6 @@ module.exports = {
 
   create: function (req, res, next) {
 
-    console.log('connection', req.param('password'));
-
     if (!req.param('password') || !req.param('email')) {
       res.json({error: 'missing argument'});
       return;

@@ -16,10 +16,6 @@ module.exports = {
     });
   },
 
-  test: function(req, res, next) {
-    res.json({test: "c'est un test"});
-  },
-
   upload: function(req, res, next) {
     console.log('upload', req.file('file'));
 
