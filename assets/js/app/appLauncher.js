@@ -6,23 +6,16 @@ var routes = new RoutesClass();
 // LOAD TEMPLATES
 
 (function(){
-  var templates = [
-    "alert",
-    "login",
-    "musicList",
-    "upload"
-  ];
 
-  for (var template in templates) {
-    template = templates[template];
+  for (var template in NT.templates) {
+    template = NT.templates[template];
     require_template(template);
   }
 
   function require_template(templateName) {
     var template = $('#template_' + templateName);
     if (template.length === 0) {
-      var tmpl_dir = '/templates/ejs';
-      var tmpl_url = tmpl_dir + '/' + templateName + '.ejs';
+      var tmpl_url = NT.tmpl_dir + templateName + NT.tmpl_type;
       var tmpl_string = '';
 
       $.ajax({
@@ -39,14 +32,6 @@ var routes = new RoutesClass();
 
     }
   }
-
-  function load(template) {
-    reqFilter.get("/templates/ejs/" + template + ".ejs", {}, function(data, jwres){
-      console.log(data);
-
-    });
-  }
-
 })(jQuery);
 
 // CONTROLLER
@@ -55,7 +40,7 @@ var session = new SessionClass();
 var upload = new UploadClass();
 var music = new MusicClass();
 var homepage = new HomepageClass();
-var audioPlayer = new PlayerClass();
+var audioPlayer;
 
 // Launch default action
 

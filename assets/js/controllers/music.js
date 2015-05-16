@@ -6,9 +6,11 @@ function MusicClass() {
   var reverse = false;
   var musicLib = [];
   var mainContainer = "#main-view-container";
+  var $mainContainer = $(mainContainer);
 
 
   this.init = function () {
+    NT.requireLayout();
     reqFilter.get("/music/", function(res, jrew) {
       var compile = template({
         orderList: orderList,
@@ -16,9 +18,9 @@ function MusicClass() {
         musicLib: res
       });
       musicLib = res;
-      $(mainContainer).html(compile);
-      $(mainContainer).on("click", onListClick);
-      $(mainContainer).on("dblclick", onListDbClick);
+      $mainContainer.html(compile);
+      $mainContainer.on("click", onListClick);
+      $mainContainer.on("dblclick", onListDbClick);
     });
   };
 
@@ -53,6 +55,6 @@ function MusicClass() {
 
   this.destroy = function() {
     console.log("music destroy");
-    $(mainContainer).html("");
+    $mainContainer.html("");
   };
 }

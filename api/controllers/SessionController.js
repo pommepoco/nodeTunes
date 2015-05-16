@@ -11,7 +11,7 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
   index: function (req, res) {
-    res.json(req.session.user);
+    res.json({user: req.session.user});
   },
 
   create: function (req, res, next) {
