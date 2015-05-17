@@ -8,7 +8,7 @@ function PlayerClass () {
   var elemCurTime = document.getElementById("song-cur-time");
   var elemPauseBut = document.getElementById("pause-button");
   var elemPlayBut = document.getElementById("play-button");
-  var elemplayerTimeLineCursor = document.getElementById("playerTimeLineCursor");
+  var elemPlayerTimeLineCursor = document.getElementById("playerTimeLineCursor");
   var elemPlayerTimeLine = document.getElementById("playerTimeLine");
   var elemPlayerArt = document.getElementById("player-art");
   var nextSongs = [];
@@ -35,7 +35,7 @@ function PlayerClass () {
     elemPauseBut = document.getElementById("pause-button");
     elemPlayBut = document.getElementById("play-button");
     elemPlayerTimeLine = document.getElementById("playerTimeLine");
-    elemplayerTimeLineCursor = document.getElementById("playerTimeLineCursor");
+    elemPlayerTimeLineCursor = document.getElementById("playerTimeLineCursor");
     elemPlayerArt = document.getElementById("player-art");
 
     elemPlayerTimeLine.addEventListener("click", this.timechange, false);
@@ -131,7 +131,7 @@ function PlayerClass () {
 
     var percent = (event.currentTime / event.duration) * 100;
 
-    elemplayerTimeLineCursor.style.width = percent + "%";
+    elemPlayerTimeLineCursor.style.width = percent + "%";
   };
 
   this.songEnd = function() {
@@ -172,7 +172,7 @@ function PlayerClass () {
     elemPlayerArt.style.display = "none";
     elemCurTime.innerText = "0:00";
     elemDuration.innerText = "0:00";
-    elemplayerTimeLineCursor.style.width= "0";
+    elemPlayerTimeLineCursor.style.width= "0";
   }
 
   function timeFormat(time) {

@@ -1,0 +1,69 @@
+<div >
+  <div id="top-bar">
+    <ul>
+      <li>
+        <i class="fa fa-backward" onclick="audioPlayer.previousSong()"></i>
+      </li>
+      <li id="pause-button" ng-click="addAlert('pause alert')" style="display: none">
+        <i class="fa fa-pause" onclick="audioPlayer.pause()"></i>
+      </li>
+      <li id="play-button">
+        <i class="fa fa-play" onclick="audioPlayer.play()"></i>
+      </li>
+      <li>
+        <i class="fa fa-forward" onclick="audioPlayer.nextSong()" ></i>
+      </li>
+      <li><input type="range" value="100" max="100" min="0" onchange="audioPlayer.volumeChange(this)" ></li>
+    </ul>
+    <div id="div-player-art">
+      <img id="player-art" style="display: none" />
+    </div>
+    <div id="topBarUploadLink"><a href="#/music/upload"><i class="fa fa-cloud-upload"></i></a></div>
+    <div id="mainSearch">
+      <label>
+        <i class="fa fa-search"></i>
+        <input type="text" ng-model="searchInput.field" />
+      </label>
+    </div>
+    <div id="playerController">
+      <span id="song-cur-time">0:00</span>
+      <span id="song-duration">0:00</span>
+      <span id="song-name" ></span>
+      <span id="song-album-artist" ></span>
+      <div id="playerTimeLine"><div id="playerTimeLineCursor"></div></div>
+      <div id="playList"></div>
+      <div id="playListTemplate" >
+        <span><i class="fa fa-list-ol"></i></span>
+        <div id="nextSong-container">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="view" class="row">
+  <div id="categoryMenu" class="large-12 columns">
+    <ul class="large-4 column small-centered">
+      <li><a href="#/music">Musics</a></li>
+      <li><a href="#/playlist">Playlist</a></li>
+      <li><a href="#/community">community</a></li>
+    </ul>
+  </div>
+  <div id="sideMenu" class="large-2 columns" >
+    <div id="musicMenu">
+      <ul class="side-nav">
+        <li><a href="#/">Library</a></li>
+        <li><a href="#/">My Playlist</a></li>
+        <li><a href="#/">Link 3</a></li>
+        <li><a href="#/">Link 4</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="large-10 columns" id="main-view-container" ></div>
+</div>
+
+<div class="small-2 large-4 columns alert-fixed" id="alertContainer">
+</div>

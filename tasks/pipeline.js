@@ -30,14 +30,8 @@ var jsFilesToInject = [
   // Dependencies like jQuery, or Angular are brought in here
 
   bc + 'jquery/dist/jquery.js',
-  bc + 'underscore/underscore-min.js',
-//  bc + 'angular/angular.js',
-//  bc + 'angular-route/angular-route.js',
-//  bc + 'angular-cookies/angular-cookies.js',
-//  bc + 'angular-animate/angular-animate.js',
-//  bc + 'ng-file-upload/angular-file-upload.min.js',
+  bc + 'lodash/lodash.min.js',
   bc + 'foundation/vendor/modernizr.js',
-//  bc + 'angular-aria/angular-aria.js',
   bc + 'fileapi/dist/FileAPI.min.js',
   'js/foundation/modernizr.js',
   'js/foundation/fastclick.js',
@@ -45,8 +39,7 @@ var jsFilesToInject = [
   'js/dependencies/**/*.js',
   'js/lib/*.js',
   'js/controllers/*.js',
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
+
   'js/**/*.js'
 ];
 

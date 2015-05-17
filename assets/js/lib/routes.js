@@ -29,11 +29,12 @@ function RoutesClass() {
     var hash = window.location.hash.replace("#", "");
     console.log(hash);
     if (routes[oldHash]) {
-      window[routes[oldHash]].destroy();
+      tools.getProperty(window, routes[oldHash]).destroy();
     }
     if (routes[hash]) {
-      window[routes[hash]].init();
+      tools.getProperty(window, routes[hash]).init();
     } else {
+      oldHash = false;
       window.location.hash = routes.default;
       return false;
     }

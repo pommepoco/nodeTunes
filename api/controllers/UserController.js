@@ -78,7 +78,7 @@ module.exports = {
         console.log('inscription', data);
       }
     });
-  },
+  }
 
 };
 

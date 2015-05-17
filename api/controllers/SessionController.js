@@ -11,12 +11,10 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
   index: function (req, res) {
-    res.json(req.session.user);
+    res.json({user: req.session.user});
   },
 
   create: function (req, res, next) {
-
-    console.log('connection', req.param('password'));
 
     if (!req.param('password') || !req.param('email')) {
       res.json({error: 'missing argument'});
